@@ -24,7 +24,17 @@ $(document).ready(function() {
     });
 
     // animate that Hadouken
+    $('#ryu > img').mousedown(function() {
+      $('.demo-hadouken').animate({
+        "margin-left": "400px"
+      }, 1000, 'swing', function() {
+        this.remove();
+      });
+    });
 
+    $('#ryu > img').on('mouseup', function() {
+      this.src="http://i.imgur.com/90Mmdcm.png";
+    });
     // let Ryu relax
     // url: http://i.imgur.com/90Mmdcm.png
 
